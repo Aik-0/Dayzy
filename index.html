@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffaf1">
+
+    <title>وش أسوي اليوم؟ | What Should I Do Today?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- الصفحة الرئيسية -->
+    <div id="homePage">
+
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">وش أسوي؟ ✨</div>
+
+                <div class="header-actions">
+                    <button id="languageToggle" class="language-button"
+                            type="button" aria-label="Change language">
+                        EN
+                    </button>
+
+                    <button id="favoritesButton" class="favorite-button"
+                            type="button">
+                        <span>♡</span>
+                        <span data-i18n="favorites">المفضلة</span>
+                        <span id="favoritesCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="hero">
+
+            <!-- الملصقات الأصلية -->
+            <div class="character character-1" aria-hidden="true">🎮</div>
+            <div class="character character-2" aria-hidden="true">🎨</div>
+            <div class="character character-3" aria-hidden="true">🍳</div>
+            <div class="character character-4" aria-hidden="true">📖</div>
+            <div class="character character-5" aria-hidden="true">🎲</div>
+            <div class="character character-6" aria-hidden="true">🍿</div>
+
+            <!-- صندوق الاختيارات -->
+            <section class="choices-card">
+
+                <div class="card-heading">
+                    <span class="eyebrow" data-i18n="eyebrow">
+                        يومك يستاهل شيء حلو
+                    </span>
+
+                    <h1 data-i18n="heading">وش ودك تسوي اليوم؟</h1>
+
+                    <p data-i18n="subtitle">
+                        خلنا نلقى لك شيء يناسب جوك ✨
+                    </p>
+                </div>
+
+                <!-- عدد الأشخاص -->
+                <div class="option">
+                    <h2 data-i18n="peopleTitle">👥 عدد الأشخاص</h2>
+
+                    <div class="people-counter">
+                        <button id="minusPeople" type="button"
+                                aria-label="Decrease people">−</button>
+
+                        <span id="peopleNumber" aria-live="polite">2</span>
+
+                        <button id="plusPeople" type="button"
+                                aria-label="Increase people">+</button>
+                    </div>
+
+                    <p class="small-hint" data-i18n="peopleHint">
+                        تقدر تختار من شخص إلى 10 أشخاص
+                    </p>
+                </div>
+
+                <!-- الميزانية -->
+                <div class="option">
+                    <h2 data-i18n="budgetTitle">💰 الميزانية</h2>
+
+                    <div class="options-row" id="budgetOptions">
+                        <button type="button" data-value="free"
+                                data-i18n="budgetFree">🪙 مجاني</button>
+
+                        <button type="button" data-value="cheap"
+                                data-i18n="budgetCheap">💵 اقتصادي</button>
+
+                        <button type="button" data-value="medium"
+                                data-i18n="budgetMedium">💵💵 متوسط</button>
+
+                        <button type="button" data-value="open"
+                                data-i18n="budgetOpen">💳 مفتوح</button>
+                    </div>
+                </div>
+
+                <!-- المزاج -->
+                <div class="option">
+                    <h2 data-i18n="moodTitle">🌈 وش جوّك؟</h2>
+
+                    <div class="options-row" id="moodOptions">
+                        <button type="button" data-value="calm"
+                                data-i18n="moodCalm">😴 هادي</button>
+
+                        <button type="button" data-value="fun"
+                                data-i18n="moodFun">🎉 فلة</button>
+
+                        <button type="button" data-value="creative"
+                                data-i18n="moodCreative">🎨 إبداع</button>
+
+                        <button type="button" data-value="learn"
+                                data-i18n="moodLearn">🧠 تعلم</button>
+
+                        <button type="button" data-value="active"
+                                data-i18n="moodActive">🏃 نشاط</button>
+                    </div>
+                </div>
+
+                <!-- الوقت -->
+                <div class="option">
+                    <h2 data-i18n="timeTitle">⏰ كم عندك وقت؟</h2>
+
+                    <div class="options-row" id="timeOptions">
+                        <button type="button" data-value="short"
+                                data-i18n="timeShort">⚡ أقل من 30 د</button>
+
+                        <button type="button" data-value="medium"
+                                data-i18n="timeMedium">🕐 30 د - ساعة</button>
+
+                        <button type="button" data-value="long"
+                                data-i18n="timeLong">🕑 1 - 2 ساعة</button>
+
+                        <button type="button" data-value="very-long"
+                                data-i18n="timeVeryLong">🌙 أكثر من ساعتين</button>
+                    </div>
+                </div>
+
+                <!-- نوع النشاط -->
+                <div class="option">
+                    <h2 data-i18n="categoryTitle">🎯 وش تحب تسوي؟</h2>
+
+                    <div class="options-row" id="categoryOptions">
+                        <button type="button" data-value="all"
+                                data-i18n="categoryAll">✨ أي شيء</button>
+
+                        <button type="button" data-value="home"
+                                data-i18n="categoryHome">🏠 بالبيت</button>
+
+                        <button type="button" data-value="outdoor"
+                                data-i18n="categoryOutdoor">🌳 برا البيت</button>
+
+                        <button type="button" data-value="digital"
+                                data-i18n="categoryDigital">💻 رقمي</button>
+
+                        <button type="button" data-value="social"
+                                data-i18n="categorySocial">👥 جماعي</button>
+                    </div>
+                </div>
+
+                <!-- خيارات إضافية -->
+                <label class="checkbox-option">
+                    <input type="checkbox" id="indoorOnly">
+                    <span data-i18n="indoorOnly">
+                        🏡 أفضل الأنشطة المنزلية فقط
+                    </span>
+                </label>
+
+                <button id="findIdea" class="main-button" type="button"
+                        data-i18n="findIdea">
+                    ✨ يلا نختار!
+                </button>
+
+                <button id="randomIdea" class="secondary-button"
+                        type="button" data-i18n="randomIdea">
+                    🎲 فاجئني بنشاط عشوائي
+                </button>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- صفحة النتائج -->
+    <div id="resultsPage" class="hidden">
+
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">وش أسوي؟ ✨</div>
+
+                <div class="header-actions">
+                    <button id="languageToggleResults"
+                            class="language-button" type="button">
+                        EN
+                    </button>
+
+                    <button id="homeFromResults" class="secondary-button"
+                            type="button" data-i18n="homeButton">
+                        🏠 الرئيسية
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="results-container">
+
+            <div class="results-heading">
+                <span class="eyebrow" data-i18n="resultsEyebrow">
+                    جهزنا لك شيء مميز
+                </span>
+
+                <h1 id="resultsTitle" data-i18n="resultsTitle">
+                    لقيت لك هذي 👀
+                </h1>
+
+                <p class="results-subtitle" data-i18n="resultsSubtitle">
+                    اختيارات ممكن تناسب جوّك اليوم
+                </p>
+            </div>
+
+            <div id="resultsMessage" class="results-message hidden"
+                 role="status" aria-live="polite"></div>
+
+            <div id="resultsList" class="results-list"></div>
+
+            <div class="results-buttons">
+                <button id="changeIdeas" class="main-button"
+                        type="button" data-i18n="changeIdeas">
+                    🔄 اقتراحات ثانية
+                </button>
+
+                <button id="backHome" class="secondary-button"
+                        type="button" data-i18n="backHome">
+                    🏠 رجوع للبداية
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- صفحة المفضلة -->
+    <div id="favoritesPage" class="hidden">
+
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">وش أسوي؟ ✨</div>
+
+                <div class="header-actions">
+                    <button id="languageToggleFavorites"
+                            class="language-button" type="button">
+                        EN
+                    </button>
+
+                    <button id="homeFromFavorites"
+                            class="secondary-button" type="button"
+                            data-i18n="homeButton">
+                        🏠 الرئيسية
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="results-container">
+
+            <div class="results-heading">
+                <span class="eyebrow" data-i18n="favoritesEyebrow">
+                    أفكارك المفضلة
+                </span>
+
+                <h1 data-i18n="favoritesTitle">⭐ أنشطتي المفضلة</h1>
+
+                <p class="results-subtitle" data-i18n="favoritesSubtitle">
+                    كل الأنشطة اللي حفظتها في مكان واحد
+                </p>
+            </div>
+
+            <div id="favoritesList" class="results-list"></div>
+
+            <div class="results-buttons">
+                <button id="clearFavorites" class="secondary-button"
+                        type="button" data-i18n="clearFavorites">
+                    🗑️ مسح المفضلة
+                </button>
+
+                <button id="backHomeFromFavorites" class="main-button"
+                        type="button" data-i18n="backHome">
+                    🏠 رجوع للبداية
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
